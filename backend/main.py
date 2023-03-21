@@ -12,8 +12,8 @@ async def root():
 
 
 @app.post("/translation/braille")
-async def say_hello(braile_instace: BrailleBody) -> BrailleResponse:
-    raw_braille = braile_instace.braille
+async def say_hello(braille_instance: BrailleBody) -> BrailleResponse:
+    raw_braille = braille_instance.braille
     kor = translate_braille_to_korean(raw_braille)[0]
 
     braille_unicodes = [ord(bra_unicode) for bra_unicode in raw_braille]
