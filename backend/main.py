@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from backend.model.braille import BrailleBody, BrailleResponse
-from backend.service.traslate import translate_braille_to_korean, translate_korean_to_braille, convert_str_to_unicodes
+from backend.service.traslate import translate_braille_to_korean, convert_str_to_unicodes, translate_korean_to_braille
 
 app = FastAPI()
 
