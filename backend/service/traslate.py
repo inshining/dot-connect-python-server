@@ -13,8 +13,6 @@ def translate_braille_to_korean(braille_pattern: str):
     model = AutoModelForSeq2SeqLM.from_pretrained("snoop2head/KoBrailleT5-small-v1")
 
     # translate braille to korean
-    # braille_pattern = "⠍⠗⠠⠪⠋⠕⠀⠘⠪⠐⠗⠒⠊⠕⠐⠀⠘⠮⠐⠍⠨⠟⠀⠚⠣⠕⠚⠕⠂</s>"
-    # braille_pattern = "⠣⠒⠉⠻</s>"
     braille_pattern = f"{braille_pattern}</s>"
     # translate braille to korean
     input_ids = tokenizer(braille_pattern, return_tensors="pt").input_ids
